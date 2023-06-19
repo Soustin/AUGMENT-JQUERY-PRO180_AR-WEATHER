@@ -27,7 +27,7 @@ function getWeather() {
         url: `https://api.openweathermap.org/data/2.5/weather?lat=${coordinates.destination_lat}&lon=${coordinates.destination_lng}&appid={94212e971d0ca977303f8ae892224bbd}`,
         type: "get",
         success: function (response) {
-            // let steps = response.routes[0].legs[0].steps
+            let steps = response.routes[0].legs[0].steps
             let name = response.name
             let weather = response.weather[0].main
             $("#scene_container").append(
